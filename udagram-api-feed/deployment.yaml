@@ -44,3 +44,9 @@ spec:
                   key: jwt
             - name: URL
               value: http://localhost
+          livenessProbe:
+            httpGet:
+              path: /health
+              port: 80
+            initialDelaySeconds: 3
+            periodSeconds: 3
