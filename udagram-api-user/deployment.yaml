@@ -18,7 +18,7 @@ spec:
         - name: udagram-api-user
           image: menthena/udagram-api-user
           ports:
-            - containerPort: 80
+            - containerPort: 8080
           resources:
             limits:
               cpu: "1"
@@ -48,10 +48,4 @@ spec:
                   name: secrets
                   key: jwt
             - name: URL
-              value: http://localhost
-          livenessProbe:
-            httpGet:
-              path: /health
-              port: 80
-            initialDelaySeconds: 3
-            periodSeconds: 3
+              value: http://udagram-api-user-svc

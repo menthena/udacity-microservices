@@ -18,7 +18,7 @@ spec:
         - name: udagram-frontend
           image: menthena/udagram-frontend
           ports:
-            - containerPort: 8080
+            - containerPort: 8100
           resources:
             limits:
               cpu: "1"
@@ -37,4 +37,4 @@ spec:
                   name: secrets
                   key: jwt
             - name: URL
-              value: http://localhost
+              value: aab1b52b60d83434ba9f74d0bd11b941-91443010.us-east-2.elb.amazonaws.com:8100

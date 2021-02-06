@@ -22,7 +22,7 @@ COPY . .
 RUN ionic build
 
 # Bind the port that the image will run on
-EXPOSE 8080
+EXPOSE 8100
 
 # Define the Docker image's behavior at runtime
-CMD ["ng","run","app:serve","--host=0.0.0.0","--port=8080","--disable-host-check"]
+CMD ["ng","run","app:serve","--host=0.0.0.0","--port=8100","--disable-host-check"]
