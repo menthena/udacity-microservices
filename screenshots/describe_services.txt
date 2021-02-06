@@ -8,7 +8,7 @@ Type:              ClusterIP
 IP:                10.100.0.1
 Port:              https  443/TCP
 TargetPort:        443/TCP
-Endpoints:         172.31.14.138:443,172.31.32.9:443
+Endpoints:         172.31.19.133:443,172.31.6.85:443
 Session Affinity:  None
 Events:            <none>
 
@@ -19,23 +19,9 @@ Labels:            service=reverseproxy
 Annotations:       <none>
 Selector:          service=reverseproxy
 Type:              ClusterIP
-IP:                10.100.0.246
-Port:              8080  8080/TCP
+IP:                10.100.85.117
+Port:              <unset>  8080/TCP
 TargetPort:        8080/TCP
-Endpoints:         <none>
-Session Affinity:  None
-Events:            <none>
-
-
-Name:              udagram-api-feed
-Namespace:         default
-Labels:            run=udagram-api-feed
-Annotations:       <none>
-Selector:          run=udagram-api-feed
-Type:              ClusterIP
-IP:                10.100.13.48
-Port:              <unset>  80/TCP
-TargetPort:        80/TCP
 Endpoints:         <none>
 Session Affinity:  None
 Events:            <none>
@@ -47,7 +33,7 @@ Labels:            run=udagram-api-feed
 Annotations:       <none>
 Selector:          run=udagram-api-feed
 Type:              ClusterIP
-IP:                10.100.132.226
+IP:                10.100.64.151
 Port:              <unset>  80/TCP
 TargetPort:        80/TCP
 Endpoints:         <none>
@@ -61,9 +47,26 @@ Labels:            run=udagram-api-user
 Annotations:       <none>
 Selector:          run=udagram-api-user
 Type:              ClusterIP
-IP:                10.100.116.101
+IP:                10.100.135.206
 Port:              <unset>  80/TCP
 TargetPort:        80/TCP
 Endpoints:         <none>
 Session Affinity:  None
 Events:            <none>
+
+
+Name:                     udagram-frontend
+Namespace:                default
+Labels:                   run=udagram-frontend
+Annotations:              <none>
+Selector:                 run=udagram-frontend
+Type:                     LoadBalancer
+IP:                       10.100.68.35
+LoadBalancer Ingress:     a1b065d0450504ab9a6537589e5e5eef-1604259746.us-east-2.elb.amazonaws.com
+Port:                     http  8080/TCP
+TargetPort:               8080/TCP
+NodePort:                 http  30891/TCP
+Endpoints:                <none>
+Session Affinity:         None
+External Traffic Policy:  Cluster
+Events:                   <none>

@@ -1,6 +1,7 @@
 NAME                                READY   STATUS    RESTARTS   AGE
-api-gateway-754ff47996-drsqt        1/1     Running   0          25m
-udagram-api-feed-6ff99fc99b-b2xkh   1/1     Running   0          82m
-udagram-api-feed-6ff99fc99b-hkjs7   1/1     Running   0          82m
-udagram-api-user-85ddb67c88-4lwcg   1/1     Running   0          35m
-udagram-api-user-85ddb67c88-66zbs   1/1     Running   0          35m
+api-gateway-6dcf4d46cc-4gssj        1/1     Running   0          4m36s
+udagram-api-feed-6886568677-b9rhd   1/1     Running   3          2m23s
+udagram-api-feed-6886568677-wnpzt   1/1     Running   3          9m1s
+udagram-api-user-564fd9977d-brcqd   1/1     Running   2          113s
+udagram-api-user-564fd9977d-k5xh6   1/1     Running   2          9m1s
+udagram-frontend-7b6bdc6d85-8ks5q   1/1     Running   0          9m1s
