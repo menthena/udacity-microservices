@@ -1,8 +1,28 @@
+Name:                                                  api-gateway
+Namespace:                                             default
+Labels:                                                <none>
+Annotations:                                           <none>
+CreationTimestamp:                                     Sun, 07 Feb 2021 03:09:16 +0300
+Reference:                                             Deployment/api-gateway
+Metrics:                                               ( current / target )
+  resource cpu on pods  (as a percentage of request):  0% (1m) / 80%
+Min replicas:                                          1
+Max replicas:                                          10
+Deployment pods:                                       1 current / 1 desired
+Conditions:
+  Type            Status  Reason               Message
+  ----            ------  ------               -------
+  AbleToScale     True    ScaleDownStabilized  recent recommendations were higher than current one, applying the highest recent recommendation
+  ScalingActive   True    ValidMetricFound     the HPA was able to successfully calculate a replica count from cpu resource utilization (percentage of request)
+  ScalingLimited  False   DesiredWithinRange   the desired count is within the acceptable range
+Events:           <none>
+
+
 Name:                                                  udagram-api-feed
 Namespace:                                             default
 Labels:                                                <none>
 Annotations:                                           <none>
-CreationTimestamp:                                     Sat, 06 Feb 2021 19:38:14 +0300
+CreationTimestamp:                                     Sun, 07 Feb 2021 03:08:56 +0300
 Reference:                                             Deployment/udagram-api-feed
 Metrics:                                               ( current / target )
   resource cpu on pods  (as a percentage of request):  0% (0) / 80%
@@ -15,21 +35,17 @@ Conditions:
   AbleToScale     True    ScaleDownStabilized  recent recommendations were higher than current one, applying the highest recent recommendation
   ScalingActive   True    ValidMetricFound     the HPA was able to successfully calculate a replica count from cpu resource utilization (percentage of request)
   ScalingLimited  False   DesiredWithinRange   the desired count is within the acceptable range
-Events:
-  Type     Reason                        Age                  From                       Message
-  ----     ------                        ----                 ----                       -------
-  Warning  FailedGetResourceMetric       65s (x13 over 6m7s)  horizontal-pod-autoscaler  did not receive metrics for any ready pods
-  Warning  FailedComputeMetricsReplicas  65s (x13 over 6m7s)  horizontal-pod-autoscaler  invalid metrics (1 invalid out of 1), first error is: failed to get cpu utilization: did not receive metrics for any ready pods
+Events:           <none>
 
 
 Name:                                                  udagram-api-user
 Namespace:                                             default
 Labels:                                                <none>
 Annotations:                                           <none>
-CreationTimestamp:                                     Sat, 06 Feb 2021 19:38:10 +0300
+CreationTimestamp:                                     Sun, 07 Feb 2021 03:09:03 +0300
 Reference:                                             Deployment/udagram-api-user
 Metrics:                                               ( current / target )
-  resource cpu on pods  (as a percentage of request):  5% (29m) / 80%
+  resource cpu on pods  (as a percentage of request):  0% (0) / 80%
 Min replicas:                                          1
 Max replicas:                                          10
 Deployment pods:                                       2 current / 2 desired
@@ -39,31 +55,24 @@ Conditions:
   AbleToScale     True    ScaleDownStabilized  recent recommendations were higher than current one, applying the highest recent recommendation
   ScalingActive   True    ValidMetricFound     the HPA was able to successfully calculate a replica count from cpu resource utilization (percentage of request)
   ScalingLimited  False   DesiredWithinRange   the desired count is within the acceptable range
-Events:
-  Type     Reason                        Age                   From                       Message
-  ----     ------                        ----                  ----                       -------
-  Warning  FailedGetResourceMetric       44s (x13 over 5m44s)  horizontal-pod-autoscaler  did not receive metrics for any ready pods
-  Warning  FailedComputeMetricsReplicas  44s (x13 over 5m44s)  horizontal-pod-autoscaler  invalid metrics (1 invalid out of 1), first error is: failed to get cpu utilization: did not receive metrics for any ready pods
+Events:           <none>
 
 
 Name:                                                  udagram-frontend
 Namespace:                                             default
 Labels:                                                <none>
 Annotations:                                           <none>
-CreationTimestamp:                                     Sat, 06 Feb 2021 19:38:19 +0300
+CreationTimestamp:                                     Sun, 07 Feb 2021 03:08:24 +0300
 Reference:                                             Deployment/udagram-frontend
 Metrics:                                               ( current / target )
   resource cpu on pods  (as a percentage of request):  0% (1m) / 80%
 Min replicas:                                          1
 Max replicas:                                          10
-Deployment pods:                                       1 current / 1 desired
+Deployment pods:                                       2 current / 2 desired
 Conditions:
-  Type            Status  Reason              Message
-  ----            ------  ------              -------
-  AbleToScale     True    ReadyForNewScale    recommended size matches current size
-  ScalingActive   True    ValidMetricFound    the HPA was able to successfully calculate a replica count from cpu resource utilization (percentage of request)
-  ScalingLimited  False   DesiredWithinRange  the desired count is within the acceptable range
-Events:
-  Type    Reason             Age    From                       Message
-  ----    ------             ----   ----                       -------
-  Normal  SuccessfulRescale  2m35s  horizontal-pod-autoscaler  New size: 1; reason: All metrics below target
+  Type            Status  Reason               Message
+  ----            ------  ------               -------
+  AbleToScale     True    ScaleDownStabilized  recent recommendations were higher than current one, applying the highest recent recommendation
+  ScalingActive   True    ValidMetricFound     the HPA was able to successfully calculate a replica count from cpu resource utilization (percentage of request)
+  ScalingLimited  False   DesiredWithinRange   the desired count is within the acceptable range
+Events:           <none>

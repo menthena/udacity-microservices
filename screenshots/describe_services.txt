@@ -1,3 +1,20 @@
+Name:                     api-gateway
+Namespace:                default
+Labels:                   app=api-gateway
+Annotations:              <none>
+Selector:                 app=api-gateway
+Type:                     LoadBalancer
+IP:                       10.100.113.67
+LoadBalancer Ingress:     aa626bdc46cef470a8cd212d973e4768-1888502866.us-east-2.elb.amazonaws.com
+Port:                     8100  8100/TCP
+TargetPort:               8100/TCP
+NodePort:                 8100  30203/TCP
+Endpoints:                172.31.20.65:8100
+Session Affinity:         None
+External Traffic Policy:  Cluster
+Events:                   <none>
+
+
 Name:              kubernetes
 Namespace:         default
 Labels:            component=apiserver
@@ -8,65 +25,55 @@ Type:              ClusterIP
 IP:                10.100.0.1
 Port:              https  443/TCP
 TargetPort:        443/TCP
-Endpoints:         172.31.19.133:443,172.31.6.85:443
+Endpoints:         172.31.22.251:443,172.31.47.205:443
 Session Affinity:  None
 Events:            <none>
 
 
-Name:              reverseproxy-svc
+Name:              udagram-api-feed
 Namespace:         default
-Labels:            service=reverseproxy
+Labels:            app=udagram-api-feed
 Annotations:       <none>
-Selector:          service=reverseproxy
+Selector:          app=udagram-api-feed
 Type:              ClusterIP
-IP:                10.100.85.117
+IP:                10.100.197.118
 Port:              <unset>  8080/TCP
 TargetPort:        8080/TCP
-Endpoints:         <none>
+Endpoints:         172.31.18.224:8080
 Session Affinity:  None
 Events:            <none>
 
 
-Name:              udagram-api-feed-svc
-Namespace:         default
-Labels:            run=udagram-api-feed
-Annotations:       <none>
-Selector:          run=udagram-api-feed
-Type:              ClusterIP
-IP:                10.100.64.151
-Port:              <unset>  80/TCP
-TargetPort:        80/TCP
-Endpoints:         <none>
-Session Affinity:  None
-Events:            <none>
-
-
-Name:              udagram-api-user-svc
+Name:              udagram-api-user
 Namespace:         default
 Labels:            run=udagram-api-user
 Annotations:       <none>
-Selector:          run=udagram-api-user
+Selector:          app=udagram-api-user
 Type:              ClusterIP
-IP:                10.100.135.206
-Port:              <unset>  80/TCP
-TargetPort:        80/TCP
-Endpoints:         <none>
+IP:                10.100.195.139
+Port:              <unset>  8080/TCP
+TargetPort:        8080/TCP
+Endpoints:         172.31.17.167:8080,172.31.8.243:8080
 Session Affinity:  None
 Events:            <none>
 
 
 Name:                     udagram-frontend
 Namespace:                default
-Labels:                   run=udagram-frontend
+Labels:                   app=udagram-frontend
 Annotations:              <none>
-Selector:                 run=udagram-frontend
+Selector:                 app=udagram-frontend
 Type:                     LoadBalancer
-IP:                       10.100.68.35
-LoadBalancer Ingress:     a1b065d0450504ab9a6537589e5e5eef-1604259746.us-east-2.elb.amazonaws.com
-Port:                     http  8080/TCP
-TargetPort:               8080/TCP
-NodePort:                 http  30891/TCP
-Endpoints:                <none>
+IP:                       10.100.95.130
+LoadBalancer Ingress:     a97a38b210fcd4d82a36ffccf12b67d1-1275429933.us-east-2.elb.amazonaws.com
+Port:                     8100  8100/TCP
+TargetPort:               8100/TCP
+NodePort:                 8100  32694/TCP
+Endpoints:                172.31.0.211:8100,172.31.13.144:8100
 Session Affinity:         None
 External Traffic Policy:  Cluster
-Events:                   <none>
+Events:
+  Type    Reason                Age   From                Message
+  ----    ------                ----  ----                -------
+  Normal  EnsuringLoadBalancer  27m   service-controller  Ensuring load balancer
+  Normal  EnsuredLoadBalancer   27m   service-controller  Ensured load balancer
