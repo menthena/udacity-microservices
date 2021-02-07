@@ -49,3 +49,5 @@ spec:
                   key: jwt
             - name: URL
               value: http://localhost
+            - name: PORT
+              value: "8080"

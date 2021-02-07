@@ -49,3 +49,5 @@ spec:
                   key: jwt
             - name: URL
               value: http://udagram-api-user-svc
+            - name: PORT
+              value: "8080"
